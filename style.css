@@ -1,0 +1,45 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 1cm;
+    padding: 1cm;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    display: flex;
+}
+
+.mainCard {
+    width: 850px;
+    min-height: 500px;
+    background: rgb(125, 167, 243);
+    border: 1px solid rgb(6, 6, 14);
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.LogoCard {
+
+    min-height: 200px;
+    background: rgb(248, 248, 248);
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.detailsCard {
+    min-height: 50px;
+    background: rgb(248, 248, 248);
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.headline {
+    font-size: 28px;
+    color: #1e3a8a;
+    margin: 10px 0;
+}

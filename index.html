@@ -1,16 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    
-    <input type="text" placeholder="Enter Location">
-    <input type="button" id="Weathersearch" value="Search">
+    <div class="mainCard">
+        <table>
+            <tr>
+                <td>
+                    <div class="LogoCard">
+                        <img class="logo" src="images/logo.png" alt="logo" width="70px">
+                        <h3 class="headline">Weather app</h3>
+                        <p class="txts">Check weather anywehere</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="detailsCard">
+                        <div class="inputCard">
+                            <input id="txtLocation" class="inputtext" type="text" placeholder="Enter your Location">
+                            <button class="btnSearch" onclick="btnSearch()">Search</button>
+                            <img class="mapSymbol" onclick="map()" on src="images/mapSymbol.png" width="25px">
+                        </div>
+                        <div class="DateTime">
+                            card with
+                            date & time
+
+                        </div>
+                        <div id="lblFullWeather" class="miniDetailsCad">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <div>
+            <h3 class="day5Title">5 day forcast</h3>
+        </div>
+        <div id="lbl5days" class="DaysCard">
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
