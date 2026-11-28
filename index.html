@@ -19,33 +19,33 @@
                 <p class="txts">Check weather anywehere in the world</p>
             </div>
 
-                <div class="detailsCard">
-                    <div class="inputCard">
-                        <input id="txtLocation" class="inputtext" type="text" placeholder="Enter your Location">
-                        <button class="btnSearch" onclick="btnSearch()">Search</button>
-                        <img class="mapSymbol" onclick="map()" on src="images/mapSymbol.png" width="25px">
-                        </div>
-                        <div class="DateTime">
-                            card with
-                            date & time
+            <div class="detailsCard">
+                <div class="inputCard">
+                    <input id="txtLocation" class="inputtext" type="text" placeholder="Enter your Location">
+                    <button class="btnSearch" onclick="btnSearch()">Search</button>
+                    <button class="btnMap" onclick="map()" title="current Location">
+                        <img class="mapSymbol" src="images/mapSymbol.png" alt="Map">
+                    </button>
+                </div>
 
-                        </div>
-                        <div id="lblFullWeather" class="miniDetailsCad">
-                        </div>
-                    </div>
-                </td>
-                </tr>
-            </table>
-        </div>
-        <div>
-            <div>
-                <h3 class="day5Title">5 day forcast</h3>
-            </div>
-            <div id="lbl5days" class="DaysCard">
+                <div id="lblDateTime" class="DateTime">
+                    Saturday , Nov 28 |12.30 PM
+                </div>
+
+                <div id="lblFullWeather" class="miniDetailsCard">
+                    <p class="placeholder-text">Search a location to view current weather details..</p>
+                </div>
             </div>
         </div>
 
-        <script src="script.js"></script>
+        <div class="forecastSection">
+            <h3 class="day5Title">5 day forcast</h3>
+        </div>
+        <div id="lbl5days" class="DaysCard">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
