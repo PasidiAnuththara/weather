@@ -29,16 +29,16 @@ function loadWeatherinfo(location) {
                         <h5>${data.forecast.forecastday[2].day.condition.text}</h5>
                     </td>
                     <td>
-                        <h5 class="Ddate">${data.forecast.forecastday[0].date}</h5>
-                        <img class="dIcon" src="https:${data.forecast.forecastday[0].day.condition.icon}" alt="" width="30px">
-                        <h5 class="dTemp">${data.forecast.forecastday[0].day.avgtemp_c} C</h5>
-                        <h5>${data.forecast.forecastday[0].day.condition.text}</h5>
+                        <h5 class="Ddate">${data.forecast.forecastday[3].date}</h5>
+                        <img class="dIcon" src="https:${data.forecast.forecastday[3].day.condition.icon}" alt="" width="30px">
+                        <h5 class="dTemp">${data.forecast.forecastday[3].day.avgtemp_c} C</h5>
+                        <h5>${data.forecast.forecastday[3].day.condition.text}</h5>
                     </td>
                     <td>
-                        <h5 class="Ddate">${data.forecast.forecastday[0].date}</h5>
-                        <img class="dIcon" src="https:${data.forecast.forecastday[0].day.condition.icon}" alt="" width="30px">
-                        <h5 class="dTemp">${data.forecast.forecastday[0].day.avgtemp_c} C</h5>
-                        <h5>${data.forecast.forecastday[0].day.condition.text}</h5>
+                        <h5 class="Ddate">${data.forecast.forecastday[4].date}</h5>
+                        <img class="dIcon" src="https:${data.forecast.forecastday[4].day.condition.icon}" alt="" width="30px">
+                        <h5 class="dTemp">${data.forecast.forecastday[4].day.avgtemp_c} C</h5>
+                        <h5>${data.forecast.forecastday[4].day.condition.text}</h5>
                     </td>
                 </tr>
             </table>
