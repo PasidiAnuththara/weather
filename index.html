@@ -11,22 +11,19 @@
 </head>
 
 <body>
-    <div class="mainCard">
-        <table>
-            <tr>
-                <td>
-                    <div class="LogoCard">
-                        <img class="logo" src="images/logo.png" alt="logo" width="70px">
-                        <h3 class="headline">Weather app</h3>
-                        <p class="txts">Check weather anywehere</p>
-                    </div>
-                </td>
-                <td>
-                    <div class="detailsCard">
-                        <div class="inputCard">
-                            <input id="txtLocation" class="inputtext" type="text" placeholder="Enter your Location">
-                            <button class="btnSearch" onclick="btnSearch()">Search</button>
-                            <img class="mapSymbol" onclick="map()" on src="images/mapSymbol.png" width="25px">
+    <div class="container">//
+        <div class="mainCard">
+            <div class="LogoCard">
+                <img class="logo" src="images/logo.png" alt="logo" width="70px">
+                <h3 class="headline">Weather app</h3>
+                <p class="txts">Check weather anywehere in the world</p>
+            </div>
+
+                <div class="detailsCard">
+                    <div class="inputCard">
+                        <input id="txtLocation" class="inputtext" type="text" placeholder="Enter your Location">
+                        <button class="btnSearch" onclick="btnSearch()">Search</button>
+                        <img class="mapSymbol" onclick="map()" on src="images/mapSymbol.png" width="25px">
                         </div>
                         <div class="DateTime">
                             card with
@@ -37,18 +34,18 @@
                         </div>
                     </div>
                 </td>
-            </tr>
-        </table>
-    </div>
-    <div>
+                </tr>
+            </table>
+        </div>
         <div>
-            <h3 class="day5Title">5 day forcast</h3>
+            <div>
+                <h3 class="day5Title">5 day forcast</h3>
+            </div>
+            <div id="lbl5days" class="DaysCard">
+            </div>
         </div>
-        <div id="lbl5days" class="DaysCard">
-        </div>
-    </div>
 
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>
