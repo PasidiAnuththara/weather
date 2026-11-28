@@ -4,7 +4,9 @@ function loadWeatherinfo(location) {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            let userlocation = document.getElementById("txtLocation").value;
+
+            document.getElementById("lblDateTime").innerText=data.location.localtime;
+            
             document.getElementById("lbl5days").innerHTML = `
             <table>
                 <tr>
