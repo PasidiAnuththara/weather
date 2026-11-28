@@ -6,61 +6,61 @@ function loadWeatherinfo(location) {
             console.log(data);
 
             document.getElementById("lblDateTime").innerText=data.location.localtime;
-            
+
             document.getElementById("lbl5days").innerHTML = `
             <table>
                 <tr>
                     <td>
-                        <h5 class="Ddate">${userlocation}</h5>
-                        <img class="dIcon" src="" alt="" width="30px">
-                        <h5 class="dTemp">${userlocation}</h5>
-                        <h5>${userlocation}</h5>
+                        <h5 class="Ddate">${data.forecast.forecastday[0].date}</h5>
+                        <img class="dIcon" src="https:${data.forecast.forecastday[0].day.condition.icon}" alt="" width="30px">
+                        <h5 class="dTemp">${data.forecast.forecastday[0].day.avgtemp_c} C</h5>
+                        <h5>${data.forecast.forecastday[0].day.condition.text}</h5>
                     </td>
                     <td>
-                        <h5 class="Ddate">${userlocation}</h5>
-                        <img class="dIcon" src="" alt="" width="30px">
-                        <h5 class="dTemp">${userlocation}</h5>
-                        <h5>${userlocation}</h5>
+                        <h5 class="Ddate">${data.forecast.forecastday[0].date}</h5>
+                        <img class="dIcon" src="https:${data.forecast.forecastday[0].day.condition.icon}" alt="" width="30px">
+                        <h5 class="dTemp">${data.forecast.forecastday[0].day.avgtemp_c} C</h5>
+                        <h5>${data.forecast.forecastday[0].day.condition.text}</h5>
                     </td>
                     <td>
-                        <h5 class="Ddate">${userlocation}</h5>
-                        <img class="dIcon" src="" alt="" width="30px">
-                        <h5 class="dTemp">${userlocation}</h5>
-                        <h5>${userlocation}</h5>
+                        <h5 class="Ddate">${data.forecast.forecastday[0].date}</h5>
+                        <img class="dIcon" src="https:${data.forecast.forecastday[0].day.condition.icon}" alt="" width="30px">
+                        <h5 class="dTemp">${data.forecast.forecastday[0].day.avgtemp_c} C</h5>
+                        <h5>${data.forecast.forecastday[0].day.condition.text}</h5>
                     </td>
                     <td>
-                        <h5 class="Ddate">${userlocation}</h5>
-                        <img class="dIcon" src="" alt="" width="30px">
-                        <h5 class="dTemp">${userlocation}</h5>
-                        <h5>${userlocation}</h5>
+                        <h5 class="Ddate">${data.forecast.forecastday[0].date}</h5>
+                        <img class="dIcon" src="https:${data.forecast.forecastday[0].day.condition.icon}" alt="" width="30px">
+                        <h5 class="dTemp">${data.forecast.forecastday[0].day.avgtemp_c} C</h5>
+                        <h5>${data.forecast.forecastday[0].day.condition.text}</h5>
                     </td>
                     <td>
-                        <h5 class="Ddate">${userlocation}</h5>
-                        <img class="dIcon" src="" alt="" width="30px">
-                        <h5 class="dTemp">${userlocation}</h5>
-                        <h5>${userlocation}</h5>
+                        <h5 class="Ddate">${data.forecast.forecastday[0].date}</h5>
+                        <img class="dIcon" src="https:${data.forecast.forecastday[0].day.condition.icon}" alt="" width="30px">
+                        <h5 class="dTemp">${data.forecast.forecastday[0].day.avgtemp_c} C</h5>
+                        <h5>${data.forecast.forecastday[0].day.condition.text}</h5>
                     </td>
-                    
                 </tr>
-
             </table>
-            `
+            `;
+
+
             document.getElementById("lblFullWeather").innerHTML = `
                <table>
                     <tr>
                         <td>
-                            <img class="wIcone" src="${userlocation}" alt="weather icon" width="90px">
+                            <img class="wIcone" src="https:${data.current.condition.icon}" alt="weather icon" width="90px">
                         </td>
                         <td>
-                            <h5 class="Wlocation">${userlocation}</h5>
-                            <h5 class="wType">${userlocation}</h5>
-                            <h2 class="wTemp">${userlocation}</h2>
-                            <h6>${userlocation}</h6>
+                            <h5 class="Wlocation">${data.location.name},${data.location.country}</h5>
+                            <h5 class="wType">${data.current.condition.text}</h5>
+                            <h2 class="wTemp">${data.current.temp_c} C</h2>
+                            <h6>Humidity: ${data.current.humidity}% | Wind: ${data.current.wind_kph} km/h</h6>
                         </td>
                     </tr>
                 </table>
-            `
-        })
+            `;
+        });
 
 }
 
@@ -68,14 +68,6 @@ function btnSearch() {
     let userlocation = document.getElementById("txtLocation").value;
     loadWeatherinfo(userlocation);
 }
-
-// navigator.geolocation.getCurrentPosition((location)=>{
-//     console.log(location.coords.latitude);
-//     console.log(location.coords.longitude);
-
-//     loadWeatherinfo(location.coords.latitude+","+location.coords.longitude)
-
-// })
 
 function map() {
     window.open(
