@@ -1,6 +1,6 @@
 
 function loadWeatherinfo(location) {
-    fetch("https://api.weatherapi.com/v1/current.json?key=826898a2aef743548dc92142261311&q=Panadura")
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=826898a2aef743548dc92142261311&q=${location}&days=5`)
         .then(res => res.json())
         .then(data => {
             console.log(data);
@@ -17,16 +17,16 @@ function loadWeatherinfo(location) {
                         <h5>${data.forecast.forecastday[0].day.condition.text}</h5>
                     </td>
                     <td>
-                        <h5 class="Ddate">${data.forecast.forecastday[0].date}</h5>
-                        <img class="dIcon" src="https:${data.forecast.forecastday[0].day.condition.icon}" alt="" width="30px">
-                        <h5 class="dTemp">${data.forecast.forecastday[0].day.avgtemp_c} C</h5>
-                        <h5>${data.forecast.forecastday[0].day.condition.text}</h5>
+                        <h5 class="Ddate">${data.forecast.forecastday[1].date}</h5>
+                        <img class="dIcon" src="https:${data.forecast.forecastday[1].day.condition.icon}" alt="" width="30px">
+                        <h5 class="dTemp">${data.forecast.forecastday[1].day.avgtemp_c} C</h5>
+                        <h5>${data.forecast.forecastday[1].day.condition.text}</h5>
                     </td>
                     <td>
-                        <h5 class="Ddate">${data.forecast.forecastday[0].date}</h5>
-                        <img class="dIcon" src="https:${data.forecast.forecastday[0].day.condition.icon}" alt="" width="30px">
-                        <h5 class="dTemp">${data.forecast.forecastday[0].day.avgtemp_c} C</h5>
-                        <h5>${data.forecast.forecastday[0].day.condition.text}</h5>
+                        <h5 class="Ddate">${data.forecast.forecastday[2].date}</h5>
+                        <img class="dIcon" src="https:${data.forecast.forecastday[2].day.condition.icon}" alt="" width="30px">
+                        <h5 class="dTemp">${data.forecast.forecastday[2].day.avgtemp_c} C</h5>
+                        <h5>${data.forecast.forecastday[2].day.condition.text}</h5>
                     </td>
                     <td>
                         <h5 class="Ddate">${data.forecast.forecastday[0].date}</h5>
